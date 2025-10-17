@@ -12,20 +12,20 @@
       margin: 0;
       padding: 20px;
     }
-header {
-  text-align: center;
-  margin-bottom: 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2.5em;
-  font-weight: bold;
-  color: #2c3e50;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background: linear-gradient(to right, #f8f9fa, #e0e0e0);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #2c3e50;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
     .logo-small {
       width: 100px;
       vertical-align: middle;
@@ -156,13 +156,13 @@ header {
     <img src="logo.png" alt="Jan Raksha Logo" class="logo-small">
     <h2>Jan Raksha Civic Emergency Assistant</h2>
   </header>
-
+<button class="sos-btn" onclick="handleSOS()">SOS</button>
   <!-- Animated Banner -->
   <div class="banner-wrapper">
     <div class="banner">
       <!-- Original Banner Items -->
       <div class="banner-item">
-        <img src="police.png" alt="Police">
+        <img src="police.webp" alt="Police">
         <h4>Police Help</h4>
         <p>Fast response for women's safety</p>
       </div>
@@ -177,19 +177,19 @@ header {
         <p>Quick firefighting response</p>
       </div>
       <div class="banner-item">
-        <img src="disaster.png" alt="Disaster">
+        <img src="disaster.jpg" alt="Disaster">
         <h4>Disaster Response</h4>
         <p>Real-time alerts & risk prediction</p>
       </div>
       <div class="banner-item">
-        <img src="family.png" alt="Family Alert">
+        <img src="family.jpeg" alt="Family Alert">
         <h4>Family Alerts</h4>
         <p>Notify your loved ones immediately</p>
       </div>
 
       <!-- Duplicate Banner Items for seamless scroll -->
       <div class="banner-item">
-        <img src="police.png" alt="Police">
+        <img src="police.webp" alt="Police">
         <h4>Police Help</h4>
         <p>Fast response for women's safety</p>
       </div>
@@ -216,36 +216,36 @@ header {
     </div>
   </div>
 
-  <!-- SOS Button -->
-  <button class="sos-btn" onclick="handleSOS()">SOS</button>
+ 
+  
 
   <!-- Emergency Cards -->
   <div class="container">
-    <div class="card" onclick="alert('Redirecting to Medical Emergency Help')">
-      <img src="fire.jpg" alt="Medical">
+    <a class="card" href="medical.html">
+      <img src="medi.jpg" alt="Medical">
       <h3>Medical Emergencies</h3>
       <p>Get immediate medical support</p>
-    </div>
-    <div class="card" onclick="alert('Redirecting to Police Help')">
-      <img src="police.png" alt="Police">
+    </a>
+    <a class="card" href="police.html">
+      <img src="police.webp" alt="Police">
       <h3>Police Emergencies</h3>
       <p>Contact nearest police stations</p>
-    </div>
-    <div class="card" onclick="alert('Redirecting to Fire Help')">
+    </a>
+    <a class="card" href="fire.html">
       <img src="fire.jpg" alt="Fire">
       <h3>Fire Emergencies</h3>
       <p>Fast firefighting support</p>
-    </div>
-    <div class="card" onclick="alert('Redirecting to Disaster Response')">
+    </a>
+    <a class="card" href="disaster.html">
       <img src="disaster.jpg" alt="Disaster">
       <h3>Natural Disasters</h3>
       <p>Real-time alerts and help</p>
-    </div>
-    <div class="card" onclick="alert('Redirecting to Breakdown Help')">
+    </a>
+    <a class="card" href="vehicle.html">
       <img src="vehicle.png" alt="Breakdown">
       <h3>Vehicle Breakdown</h3>
       <p>Quick roadside assistance</p>
-    </div>
+    </a>
   </div>
 
   <footer>
