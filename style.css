@@ -219,3 +219,8 @@ body::-webkit-scrollbar-thumb:hover {
 .mb-20 { margin-bottom: 20px; }
 .p-20 { padding: 20px; }
 .text-center { text-align: center; }
+
+/* ===== Git Decorations ===== */
+{
+  "git.decorations.enabled": false
+}
