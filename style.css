@@ -221,6 +221,4 @@ body::-webkit-scrollbar-thumb:hover {
 .text-center { text-align: center; }
 
 /* ===== Git Decorations ===== */
-{
-  "git.decorations.enabled": false
-}
+/* Git decorations are disabled */
