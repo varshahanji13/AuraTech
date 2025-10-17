@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jan Raksha Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="main-bg">
+  <header>
+    <img src="logo.png" alt="Jan Raksha Logo" class="logo-small">
+    <h2>Jan Raksha Civic Emergency Assistant</h2>
+  </header>
+
+  <div class="banner">
+    <div class="banner-text">
+      <h3>Unified Emergency Help for All</h3>
+      <p>Police • Medical • Fire • Disaster • Vehicle Breakdown</p>
+    </div>
+    <img src="qr-placeholder.png" alt="QR Code" class="qr">
+  </div>
+
+  <button class="sos-btn" onclick="handleSOS()">SOS</button>
+
+  <div class="card-container">
+    <div class="card" onclick="alert('Redirecting to Medical Emergency Help')">🚑 Medical Emergencies</div>
+    <div class="card" onclick="alert('Redirecting to Police Help')">👮 Police Emergencies</div>
+    <div class="card" onclick="alert('Redirecting to Fire Help')">🔥 Fire Emergencies</div>
+    <div class="card" onclick="alert('Redirecting to Disaster Response')">🌪 Natural Disasters</div>
+    <div class="card" onclick="alert('Redirecting to Breakdown Help')">🚗 Vehicle Breakdown</div>
+  </div>
+
+  <footer>
+    <p>Powered by AI • Secured by Blockchain • Serving Every Citizen</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
