@@ -4,36 +4,258 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jan Raksha Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== Base Styles ===== */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    .logo-small {
+      width: 100px;
+      vertical-align: middle;
+    }
+    h2 {
+      margin: 10px 0 0 0;
+      color: #d32f2f;
+    }
+
+    /* ===== Banner Styles ===== */
+    .banner-wrapper {
+      overflow: hidden;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 10px 0;
+    }
+    .banner {
+      display: flex;
+      gap: 50px;
+      animation: scroll 20s linear infinite;
+      align-items: center;
+      white-space: nowrap;
+    }
+    .banner-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 200px;
+      text-align: center;
+      color: #003B5C;
+    }
+    .banner-item img {
+      width: 60px;
+      margin-bottom: 5px;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== SOS Button ===== */
+    .sos-btn {
+      background-color: #FF3B30;
+      color: white;
+      font-size: 2em;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border: none;
+      margin: 20px auto;
+      cursor: pointer;
+      display: block;
+      box-shadow: 0 6px 25px rgba(255, 59, 48, 0.5);
+      transition: 0.3s ease;
+    }
+    .sos-btn:hover {
+      background-color: #C53030;
+      transform: scale(1.08);
+    }
+
+    /* ===== Cards Section ===== */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .card {
+      background: white;
+      border: 3px solid #ffcccc;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:hover {
+      transform: scale(1.07);
+      border-color: #ff6666;
+    }
+    .card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #d32f2f;
+      font-size: 20px;
+    }
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      .banner {
+        gap: 30px;
+      }
+      .card {
+        width: 200px;
+      }
+      .sos-btn {
+        width: 120px;
+        height: 120px;
+        font-size: 1.5em;
+      }
+    }
+  </style>
 </head>
-<body class="main-bg">
+<body>
+  <!-- Header -->
   <header>
     <img src="logo.png" alt="Jan Raksha Logo" class="logo-small">
     <h2>Jan Raksha Civic Emergency Assistant</h2>
   </header>
 
-  <div class="banner">
-    <div class="banner-text">
-      <h3>Unified Emergency Help for All</h3>
-      <p>Police • Medical • Fire • Disaster • Vehicle Breakdown</p>
+  <!-- Animated Banner -->
+  <div class="banner-wrapper">
+    <div class="banner">
+      <!-- Original Banner Items -->
+      <div class="banner-item">
+        <img src="police.png" alt="Police">
+        <h4>Police Help</h4>
+        <p>Fast response for women's safety</p>
+      </div>
+      <div class="banner-item">
+        <img src="medi.jpg" alt="Ambulance">
+        <h4>Medical Aid</h4>
+        <p>Hospital integration & first-aid</p>
+      </div>
+      <div class="banner-item">
+        <img src="fire.jpg" alt="Fire">
+        <h4>Fire Emergencies</h4>
+        <p>Quick firefighting response</p>
+      </div>
+      <div class="banner-item">
+        <img src="disaster.png" alt="Disaster">
+        <h4>Disaster Response</h4>
+        <p>Real-time alerts & risk prediction</p>
+      </div>
+      <div class="banner-item">
+        <img src="family.png" alt="Family Alert">
+        <h4>Family Alerts</h4>
+        <p>Notify your loved ones immediately</p>
+      </div>
+
+      <!-- Duplicate Banner Items for seamless scroll -->
+      <div class="banner-item">
+        <img src="police.png" alt="Police">
+        <h4>Police Help</h4>
+        <p>Fast response for women's safety</p>
+      </div>
+      <div class="banner-item">
+        <img src="ambulance.png" alt="Ambulance">
+        <h4>Medical Aid</h4>
+        <p>Hospital integration & first-aid</p>
+      </div>
+      <div class="banner-item">
+        <img src="fire.png" alt="Fire">
+        <h4>Fire Emergencies</h4>
+        <p>Quick firefighting response</p>
+      </div>
+      <div class="banner-item">
+        <img src="disaster.png" alt="Disaster">
+        <h4>Disaster Response</h4>
+        <p>Real-time alerts & risk prediction</p>
+      </div>
+      <div class="banner-item">
+        <img src="family.png" alt="Family Alert">
+        <h4>Family Alerts</h4>
+        <p>Notify your loved ones immediately</p>
+      </div>
     </div>
-    <img src="qr-placeholder.png" alt="QR Code" class="qr">
   </div>
 
+  <!-- SOS Button -->
   <button class="sos-btn" onclick="handleSOS()">SOS</button>
 
-  <div class="card-container">
-    <div class="card" onclick="alert('Redirecting to Medical Emergency Help')">🚑 Medical Emergencies</div>
-    <div class="card" onclick="alert('Redirecting to Police Help')">👮 Police Emergencies</div>
-    <div class="card" onclick="alert('Redirecting to Fire Help')">🔥 Fire Emergencies</div>
-    <div class="card" onclick="alert('Redirecting to Disaster Response')">🌪 Natural Disasters</div>
-    <div class="card" onclick="alert('Redirecting to Breakdown Help')">🚗 Vehicle Breakdown</div>
+  <!-- Emergency Cards -->
+  <div class="container">
+    <div class="card" onclick="alert('Redirecting to Medical Emergency Help')">
+      <img src="fire.jpg" alt="Medical">
+      <h3>Medical Emergencies</h3>
+      <p>Get immediate medical support</p>
+    </div>
+    <div class="card" onclick="alert('Redirecting to Police Help')">
+      <img src="police.png" alt="Police">
+      <h3>Police Emergencies</h3>
+      <p>Contact nearest police stations</p>
+    </div>
+    <div class="card" onclick="alert('Redirecting to Fire Help')">
+      <img src="fire.jpg" alt="Fire">
+      <h3>Fire Emergencies</h3>
+      <p>Fast firefighting support</p>
+    </div>
+    <div class="card" onclick="alert('Redirecting to Disaster Response')">
+      <img src="disaster.jpg" alt="Disaster">
+      <h3>Natural Disasters</h3>
+      <p>Real-time alerts and help</p>
+    </div>
+    <div class="card" onclick="alert('Redirecting to Breakdown Help')">
+      <img src="vehicle.png" alt="Breakdown">
+      <h3>Vehicle Breakdown</h3>
+      <p>Quick roadside assistance</p>
+    </div>
   </div>
 
   <footer>
     <p>Powered by AI • Secured by Blockchain • Serving Every Citizen</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function handleSOS() {
+      alert('🚨 SOS Alert Sent! Nearby services have been notified.');
+    }
+  </script>
 </body>
 </html>
