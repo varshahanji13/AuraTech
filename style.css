@@ -3,13 +3,13 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: #003B5C; /* deep blue for text */
-  background-color: #fff; /* clean white background */
+  background-color: #796fff; /* clean white background */
   text-align: center;
 }
 
 /* ===== Login / Signup Page ===== */
 .login-bg {
-  background-color: #fff;
+  background-color: #a39ce2;
 }
 
 .login-container {
